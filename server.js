@@ -63,8 +63,7 @@ const corsOptions = {
   origin: function(origin, callback) {
     if (
       !origin ||
-      origin === "https://www.officebankingchile.info" ||
-      origin === "https://officebankingchile.info" ||
+      origin === "https://officebank.onrender.com" ||
       origin === "http://localhost:3000" ||
       origin === "http://localhost:5000"
     ) {
