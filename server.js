@@ -212,6 +212,10 @@ app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "admin.html"));
 });
 
+app.get("/productos", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "productos.html"));
+});
+
 app.get("/autorizacion", (req, res) => {
   try {
     const cfg = JSON.parse(fs.readFileSync("config.json", "utf8"));
